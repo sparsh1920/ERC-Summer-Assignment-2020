@@ -17,5 +17,5 @@ happening now is that even if the slave is sending a message the master woudlnt
 be reading it and is stuck in an infinite loop. The master only accepts the 20 bytes
 which have the special characters henceforth it stops reading.
 
-I encryption isnt very strong since when I coded an complex encryption, it spit
+I encryption isnt very strong since when I coded a complex encryption, it spit
 out some funny output.
