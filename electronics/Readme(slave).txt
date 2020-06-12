@@ -22,14 +22,14 @@ the entire message in one go but the request function cant deliver empty spaces 
 the condition p isnt fullfilled.
 The catch is if you forget to put a period the message will not be sent.
 
-Right now the message stength is capped at 20 bytes so I tried to use sizeof(message)
+I tried to use sizeof(message)
 to initialize the string. But what that is doing is only sending in 5 bytes of
 message data. If the message is more than 5 bytes, its dropping the rest. 
-This funciton is restricting the value to 5.
-I had to use .length function instead of sizeof(). solved!
+It hit me later that the string is passed as pointer so the size was capped at 5.
+So I used the .length function.
 
 One more problem was that the pin I sent was limited to 7 bits only so any number 
-greater than 127 would not work(as in one byte sent the first bit represents if you
+greater than 127 would not work(as in for every byte sent the first bit represents if you
  want the master to read(1) or write(0), the rest contains the data). So i converted
  the pin into a string which means each digit gets a space of 7 bits. 
 
