@@ -50,7 +50,7 @@
     msg_to_binary[len+6] = (byte)c;
     if (p){
       Serial.println("Sent.");
-      Wire.write(msg_to_binary, len+7); } //Send master an array of 20 bytes
+      Wire.write(msg_to_binary, len+7); } //Send master the array
     
   }
 
