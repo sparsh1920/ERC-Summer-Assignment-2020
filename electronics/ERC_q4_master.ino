@@ -6,6 +6,7 @@
 //I created many different versions so ill try my best to recall why i did what i did.
 //You can type in any pin less than or equal to 4 digits. If you input 5 or more digits 5th onwards will be read as a message.
 //Also after typing in a message from slave dont forget to add a period else communication wouldnt proceed.
+//eg. secret message.
 
 #include<Wire.h>   //Include the wire library for i2c communication
 
